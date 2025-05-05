@@ -3,23 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редирект на v2raytun</title>
-    <!-- Мгновенный редирект через мета-тег -->
-    <meta http-equiv="refresh" content="0; url=v2raytun://import_route/eyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJpZCI6IkIyNDY0MTNBLTc3MkQtNEFERS04OUFFLTVERTY2OEI3NkQzQSIsImJhbGFuY2VycyI6W10sImRvbWFpbk1hdGNoZXIiOiJoeWJyaWQiLCJuYW1lIjoiUnVsZXNldCIsInJ1bGVzIjpbeyJfX25hbWVfXyI6IvCfmqsgQWRzLUJsb2NrIiwiaWQiOiJBRjQxRERCMi1GNzdCLTQ1RTgtOTlCMi1GMDMzMDZGREQ2NzgiLCJ0eXBlIjoiZmllbGQiLCJkb21haW4iOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMtYWxsIiwiZ2Vvc2l0ZTpnb29nbGUtYWRzIl0sIm91dGJvdW5kVGFnIjoiYmxvY2sifSx7Il9fbmFtZV9fIjoicnUgem9uZSIsImlkIjoiQTMxQTUyOEQtMkQ5MC00RjA3LTkxMDctNDFFQzAwRERGMkNDIiwidHlwZSI6ImZpZWxkIiwiZG9tYWluIjpbImRvbWFpbjoqLnJ1IiwiZG9tYWluOi5ydSIsImRvbWFpbjoqLtGA0YQiLCJkb21haW46LtGA0YQiLCJkb21haW46Ki5zdSIsImRvbWFpbjouc3UiXSwib3V0Ym91bmRUYWciOiJkaXJlY3QifV19">
+    <title>Редирект</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .loading {
+            display: none;
         }
     </style>
 </head>
 <body>
-    <p>Если вы не были автоматически перенаправлены, <a href="v2raytun://import_route/eyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJpZCI6IkIyNDY0MTNBLTc3MkQtNEFERS04OUFFLTVERTY2OEI3NkQzQSIsImJhbGFuY2VycyI6W10sImRvbWFpbk1hdGNoZXIiOiJoeWJyaWQiLCJuYW1lIjoiUnVsZXNldCIsInJ1bGVzIjpbeyJfX25hbWVfXyI6IvCfmqsgQWRzLUJsb2NrIiwiaWQiOiJBRjQxRERCMi1GNzdCLTQ1RTgtOTlCMi1GMDMzMDZGREQ2NzgiLCJ0eXBlIjoiZmllbGQiLCJkb21haW4iOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMtYWxsIiwiZ2Vvc2l0ZTpnb29nbGUtYWRzIl0sIm91dGJvdW5kVGFnIjoiYmxvY2sifSx7Il9fbmFtZV9fIjoicnUgem9uZSIsImlkIjoiQTMxQTUyOEQtMkQ5MC00RjA3LTkxMDctNDFFQzAwRERGMkNDIiwidHlwZSI6ImZpZWxkIiwiZG9tYWluIjpbImRvbWFpbjoqLnJ1IiwiZG9tYWluOi5ydSIsImRvbWFpbjoqLtGA0YQiLCJkb21haW46LtGA0YQiLCJkb21haW46Ki5zdSIsImRvbWFpbjouc3UiXSwib3V0Ym91bmRUYWciOiJkaXJlY3QifV19">нажмите здесь</a>.</p>
+    <div class="loading">Перенаправление...</div>
 
     <script>
-        // Мгновенный редирект через JavaScript
-        window.location.href = "v2raytun://import_route/eyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJpZCI6IkIyNDY0MTNBLTc3MkQtNEFERS04OUFFLTVERTY2OEI3NkQzQSIsImJhbGFuY2VycyI6W10sImRvbWFpbk1hdGNoZXIiOiJoeWJyaWQiLCJuYW1lIjoiUnVsZXNldCIsInJ1bGVzIjpbeyJfX25hbWVfXyI6IvCfmqsgQWRzLUJsb2NrIiwiaWQiOiJBRjQxRERCMi1GNzdCLTQ1RTgtOTlCMi1GMDMzMDZGREQ2NzgiLCJ0eXBlIjoiZmllbGQiLCJkb21haW4iOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMtYWxsIiwiZ2Vvc2l0ZTpnb29nbGUtYWRzIl0sIm91dGJvdW5kVGFnIjoiYmxvY2sifSx7Il9fbmFtZV9fIjoicnUgem9uZSIsImlkIjoiQTMxQTUyOEQtMkQ5MC00RjA3LTkxMDctNDFFQzAwRERGMkNDIiwidHlwZSI6ImZpZWxkIiwiZG9tYWluIjpbImRvbWFpbjoqLnJ1IiwiZG9tYWluOi5ydSIsImRvbWFpbjoqLtGA0YQiLCJkb21haW46LtGA0YQiLCJkb21haW46Ki5zdSIsImRvbWFpbjouc3UiXSwib3V0Ym91bmRUYWciOiJkaXJlY3QifV19";
+        /**
+         * Функция получения параметров из URL
+         */
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split('&');
+            
+            for (let i = 0; i < pairs.length; i++) {
+                const pair = pairs[i].split('=');
+                params[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+            }
+            
+            return params;
+        }
+
+        /**
+         * Функция для перенаправления по заданному URL
+         */
+        function redirect(url) {
+            document.querySelector('.loading').style.display = 'block';
+            window.location.href = url;
+        }
+
+        // Получаем параметры из URL
+        const params = getUrlParams();
+        let redirectUrl = '';
+
+        // Проверяем тип запроса и формируем URL для перенаправления
+        if (params.type === 'config' && params.data) {
+            // Перенаправление на конфигурацию v2raytun
+            redirectUrl = `v2raytun://import_route/${params.data}`;
+        } else if (params.type === 'subscription' && params.url) {
+            // Перенаправление на v2raytun с подпиской
+            redirectUrl = `v2raytun://import/${params.url}`;
+        } else if (params.type === 'direct' && params.url) {
+            // Прямое перенаправление на указанный URL
+            redirectUrl = params.url;
+        } else {
+            // По умолчанию используем предустановленную конфигурацию
+            redirectUrl = 'v2raytun://import_route/eyJkb21haW5TdHJhdGVneSI6IkFzSXMiLCJpZCI6IkIyNDY0MTNBLTc3MkQtNEFERS04OUFFLTVERTY2OEI3NkQzQSIsImJhbGFuY2VycyI6W10sImRvbWFpbk1hdGNoZXIiOiJoeWJyaWQiLCJuYW1lIjoiUnVsZXNldCIsInJ1bGVzIjpbeyJfX25hbWVfXyI6IvCfmqsgQWRzLUJsb2NrIiwiaWQiOiJBRjQxRERCMi1GNzdCLTQ1RTgtOTlCMi1GMDMzMDZGREQ2NzgiLCJ0eXBlIjoiZmllbGQiLCJkb21haW4iOlsiZ2Vvc2l0ZTpjYXRlZ29yeS1hZHMtYWxsIiwiZ2Vvc2l0ZTpnb29nbGUtYWRzIl0sIm91dGJvdW5kVGFnIjoiYmxvY2sifSx7Il9fbmFtZV9fIjoicnUgem9uZSIsImlkIjoiQTMxQTUyOEQtMkQ5MC00RjA3LTkxMDctNDFFQzAwRERGMkNDIiwidHlwZSI6ImZpZWxkIiwiZG9tYWluIjpbImRvbWFpbjoqLnJ1IiwiZG9tYWluOi5ydSIsImRvbWFpbjoqLtGA0YQiLCJkb21haW46LtGA0YQiLCJkb21haW46Ki5zdSIsImRvbWFpbjouc3UiXSwib3V0Ym91bmRUYWciOiJkaXJlY3QifV19';
+        }
+
+        // Выполняем перенаправление
+        redirect(redirectUrl);
     </script>
 </body>
 </html>

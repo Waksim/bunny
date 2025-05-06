@@ -1,95 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редирект</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 90vh;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #f8f8f8;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 30px;
-            margin: 20px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
-        .error {
-            color: #e74c3c;
-            margin-top: 20px;
-        }
-        .link-text {
-            word-break: break-all;
-            font-size: 14px;
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+    <meta name="description" content="Страница перенаправления">
+    <meta name="robots" content="noindex,follow">
+    <title>Перенаправление</title>
+    <!-- Добавляем favicon для большей легитимности -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔄</text></svg>">
 </head>
 <body>
-    <div class="container">
-        <h2 id="redirect-title">Перенаправление...</h2>
-        <p id="redirect-message">Если вы не были автоматически перенаправлены, пожалуйста, нажмите на кнопку ниже:</p>
-        <a id="manual-link" href="#" class="btn">Перейти по ссылке</a>
-        <p id="link-text" class="link-text"></p>
-        
-        <p id="error" class="error" style="display: none;">Не указан параметр deeplink. Пожалуйста, добавьте параметр в URL.</p>
-    </div>
-
+    <noscript>
+        <p>Для продолжения необходимо включить JavaScript в вашем браузере.</p>
+    </noscript>
+    
     <script>
-        // Функция получения параметра из URL
+        // Получаем параметр deeplink из URL
         function getDeeplink() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('deeplink');
+            const params = new URLSearchParams(window.location.search);
+            return params.get('deeplink');
         }
-
-        // Получаем deeplink из URL
-        const deeplink = getDeeplink();
         
-        // Если deeplink указан, настраиваем страницу и делаем редирект
+        // Проверяем наличие параметра и выполняем редирект
+        const deeplink = getDeeplink();
         if (deeplink) {
-            // Устанавливаем кликабельную ссылку
-            document.getElementById('manual-link').href = deeplink;
-            
-            // Показываем URL для информации пользователю (опционально)
-            document.getElementById('link-text').textContent = deeplink;
-            
-            // Автоматический редирект
+            // Используем setTimeout для минимальной задержки, 
+            // это может помочь избежать блокировки со стороны браузера
             setTimeout(function() {
-                window.location.href = deeplink;
-            }, 1000); // Задержка 1 секунда для того, чтобы страница успела отрисоваться
-        } else {
-            // Если deeplink не указан, показываем сообщение об ошибке
-            document.getElementById('redirect-title').style.display = 'none';
-            document.getElementById('redirect-message').style.display = 'none';
-            document.getElementById('manual-link').style.display = 'none';
-            document.getElementById('error').style.display = 'block';
+                window.location.replace(deeplink);
+            }, 50);
         }
     </script>
 </body>
